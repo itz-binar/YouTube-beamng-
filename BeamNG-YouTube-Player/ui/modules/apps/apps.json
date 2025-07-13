@@ -1,0 +1,53 @@
+{
+  "apps": [
+    {
+      "id": "youtube_screen",
+      "name": "YouTube Player",
+      "author": "BeamNG YouTube Integration",
+      "version": "1.0.0",
+      "description": "Advanced YouTube player for vehicle entertainment systems - Like Android Auto but for YouTube!",
+      "icon": "youtube_screen/icon.png",
+      "path": "youtube_screen/youtube_screen.html",
+      "luaPath": "youtube_screen/youtube_screen_app.lua",
+      "category": "Entertainment",
+      "tags": ["youtube", "video", "music", "entertainment", "media"],
+      "defaultSize": {
+        "width": 800,
+        "height": 600
+      },
+      "minSize": {
+        "width": 400,
+        "height": 300
+      },
+      "maxSize": {
+        "width": 1200,
+        "height": 900
+      },
+      "resizable": true,
+      "closable": true,
+      "alwaysOnTop": false,
+      "showInAppMenu": true,
+      "permissions": [
+        "internet",
+        "audio",
+        "video",
+        "fullscreen"
+      ],
+      "supportedPlatforms": [
+        "windows",
+        "linux",
+        "mac"
+      ],
+      "requirements": {
+        "internet": true,
+        "audio": true
+      },
+      "settings": {
+        "autostart": false,
+        "rememberPosition": true,
+        "rememberSize": true,
+        "defaultVolume": 50
+      }
+    }
+  ]
+}

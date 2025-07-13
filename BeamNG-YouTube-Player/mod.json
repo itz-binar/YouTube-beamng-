@@ -1,0 +1,69 @@
+{
+  "name": "YouTube Player for BeamNG.drive",
+  "author": "BeamNG Community",
+  "version": "1.0.0",
+  "description": "Advanced YouTube player for vehicle entertainment systems. Like Android Auto but for YouTube! Play videos, music, and entertainment content directly in your vehicle's dashboard.",
+  "gameVersion": "0.24.0.0",
+  "category": "Entertainment",
+  "tags": [
+    "youtube",
+    "video",
+    "music",
+    "entertainment",
+    "ui",
+    "app",
+    "media",
+    "dashboard",
+    "android-auto"
+  ],
+  "dependencies": [],
+  "conflicts": [],
+  "website": "",
+  "repository": "",
+  "license": "MIT",
+  "icon": "ui/modules/apps/youtube_screen/icon.png",
+  "screenshots": [
+    "screenshots/youtube_player_1.png",
+    "screenshots/youtube_player_2.png"
+  ],
+  "features": [
+    "Full YouTube video playback",
+    "Music and video support",
+    "Volume controls",
+    "Preset quick-play buttons",
+    "Beautiful car-dashboard UI",
+    "Responsive design",
+    "BeamNG integration",
+    "Vehicle event handling",
+    "Settings persistence",
+    "Online/offline status",
+    "Loading animations",
+    "Error handling"
+  ],
+  "installation": {
+    "type": "ui_app",
+    "extractTo": "ui/modules/apps/"
+  },
+  "permissions": [
+    "internet",
+    "audio",
+    "video",
+    "ui",
+    "settings"
+  ],
+  "supportedLanguages": [
+    "en",
+    "ku"
+  ],
+  "changelog": {
+    "1.0.0": [
+      "Initial release",
+      "YouTube video playback",
+      "Modern UI design",
+      "BeamNG integration",
+      "Volume and playback controls",
+      "Preset video buttons",
+      "Settings persistence"
+    ]
+  }
+}
