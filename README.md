@@ -1,231 +1,247 @@
-# 🎵 YouTube Player for BeamNG.drive - Project Summary
+# 🎵 YouTube Player for BeamNG.drive
 
-## 📋 Project Overview
+**Advanced YouTube player for vehicle entertainment systems - Like Android Auto but for YouTube!**
 
-I have successfully created a complete YouTube Player mod for BeamNG.drive following your detailed Kurdish instructions. This mod provides an Android Auto-like experience for YouTube videos directly in vehicle dashboards.
-
----
-
-## 🎯 Completed Features
-
-### ✅ **Core Functionality**
-- **Full YouTube Integration**: IFrame API with video loading capabilities
-- **Media Controls**: Play, pause, stop, volume control, mute/unmute
-- **URL Support**: YouTube URLs, short URLs, embed URLs, and direct video IDs
-- **Preset Videos**: Quick-access buttons for popular videos
-- **Status Indicators**: Online/offline detection and loading animations
-
-### ✅ **BeamNG.drive Integration**
-- **Vehicle Events**: Auto-pause on vehicle stop, resume on start
-- **Game State**: Handles pause/resume and emergency stops
-- **Settings Persistence**: Saves user preferences between sessions
-- **Lua App System**: Fully integrated with BeamNG's UI framework
-
-### ✅ **User Interface**
-- **Modern Design**: Car dashboard-inspired dark theme
-- **Responsive Layout**: Works on different screen sizes
-- **Kurdish Support**: Bilingual interface and documentation
-- **Intuitive Controls**: Easy-to-use buttons and sliders
+<div align="center">
+  <img src="screenshots/youtube_player_preview.png" alt="YouTube Player Preview" width="600">
+</div>
 
 ---
 
-## 📁 Project Structure
+## 🌟 Features | تایبەتمەندییەکان
 
-```
-BeamNG-YouTube-Player/
-├── 📄 mod.json                                    # Main mod configuration
-├── 📄 LICENSE                                     # MIT license
-├── 📄 README.md                                   # Comprehensive documentation
-├── 🔧 install.bat                                 # Windows installer
-├── 🔧 install.sh                                  # Linux/Mac installer
-└── 📁 ui/
-    └── 📁 modules/
-        └── 📁 apps/
-            ├── 📄 apps.json                       # App registration
-            └── 📁 youtube_screen/
-                ├── 🌐 youtube_screen.html         # Main UI interface
-                ├── 🎨 style.css                   # Modern styling
-                ├── ⚙️ script.js                   # JavaScript functionality
-                ├── 🔧 youtube_screen_app.lua      # BeamNG integration
-                └── 📦 youtube_integration.lua     # Advanced YouTube features
-```
+### 🎬 **Advanced YouTube Integration**
+- ✅ Full YouTube video playback with HD quality
+- ✅ Support for music videos, live streams, and regular content
+- ✅ Direct URL input or video ID support
+- ✅ YouTube IFrame API integration for smooth playback
+
+### 🎮 **Full Media Controls**
+- ✅ Play/Pause/Stop controls
+- ✅ Volume slider with percentage display
+- ✅ Mute/Unmute functionality
+- ✅ Loading animations and status indicators
+
+### 🚗 **BeamNG.drive Integration**
+- ✅ Vehicle event handling (start/stop/reset)
+- ✅ Game state awareness (pause/resume)
+- ✅ Settings persistence across sessions
+- ✅ Responsive UI for different screen sizes
+
+### 🎨 **Modern UI Design**
+- ✅ Car dashboard-inspired interface
+- ✅ Dark theme with glowing accents
+- ✅ Smooth animations and transitions
+- ✅ Mobile-responsive design
+
+### 🔧 **User-Friendly Features**
+- ✅ Preset quick-play buttons for popular videos
+- ✅ Online/offline status indicator
+- ✅ Error handling and user feedback
+- ✅ Kurdish and English language support
 
 ---
 
-## 🚀 Installation Methods
+## 🛠 Installation | دامەزراندن
 
-### **Method 1: Automated Installation**
-- **Windows**: Run `install.bat` as administrator
-- **Linux/Mac**: Run `./install.sh` in terminal
-- Auto-detects BeamNG.drive folder and installs mod
+### Method 1: Manual Installation | شێوازی یەکەم: دامەزراندنی دەستی
 
-### **Method 2: Manual Installation**
-1. Copy `BeamNG-YouTube-Player` folder to `Documents/BeamNG.drive/mods/unpacked/`
-2. Enable mod in BeamNG.drive mod menu
+**English:**
+1. Download the mod files
+2. Copy the `BeamNG-YouTube-Player` folder to:
+   - `Documents/BeamNG.drive/mods/unpacked/`
+   - Or: `BeamNG.drive/mods/unpacked/`
+3. Start BeamNG.drive
+4. Go to Main Menu → Mods → Enable "YouTube Player"
+5. In-game, press F11 to open Apps menu
+6. Select "YouTube Player" from the Entertainment category
+
+**Kurdish:**
+1. فایلەکانی مۆدەکە دابەزێنە
+2. فولدەری `BeamNG-YouTube-Player` کۆپی بکە بۆ:
+   - `Documents/BeamNG.drive/mods/unpacked/`
+   - یان: `BeamNG.drive/mods/unpacked/`
+3. بازی BeamNG.drive بکەرەوە
+4. بڕۆ بۆ Main Menu → Mods → "YouTube Player" چالاک بکە
+5. لە بازیدا، F11 دابگرە بۆ کردنەوەی Apps menu
+6. "YouTube Player" هەڵبژێرە لە بەشی Entertainment
+
+### Method 2: Auto-Install | شێوازی دووەم: دامەزراندنی خۆکار
+
+1. Place the mod in BeamNG mods folder
+2. The mod will auto-register with the UI system
 3. Access via F11 → Apps → Entertainment → YouTube Player
 
 ---
 
-## 🎮 Usage Instructions
+## 🎮 Usage Guide | ڕێنمایی بەکارهێنان
 
-### **Loading Videos**
-1. Enter YouTube URL or video ID in input field
-2. Click "Load Video" or press Enter
-3. Use preset buttons for quick access
+### Basic Usage | بەکارهێنانی سەرەتایی
 
-### **Controls**
-- **▶️ Play/Pause**: Toggle video playback
-- **⏹️ Stop**: Stop video completely
-- **🔊 Volume**: Adjust audio level (0-100%)
-- **🔇 Mute**: Toggle audio on/off
+**English:**
+1. **Loading Videos:**
+   - Enter YouTube URL or video ID in the input field
+   - Click "Load Video" or press Enter
+   - Use preset buttons for quick access to popular videos
 
-### **Preset Videos**
+2. **Playback Controls:**
+   - ▶️ Play/Pause: Toggle video playback
+   - ⏹️ Stop: Stop video and reset position
+   - 🔊 Mute/Unmute: Toggle audio
+
+3. **Volume Control:**
+   - Use the slider to adjust volume (0-100%)
+   - Real-time volume percentage display
+
+**Kurdish:**
+1. **بارکردنی ڤیدیۆ:**
+   - لینکی YouTube یان ID ی ڤیدیۆ بنووسە
+   - کلیک لە "Load Video" بکە یان Enter بگرە
+   - دوگمەکانی preset بەکاربهێنە بۆ دەستگەیشتنی خێرا
+
+2. **کۆنترۆڵی پلەی:**
+   - ▶️ Play/Pause: پلەی ڤیدیۆ بکە/بیسڕەوە
+   - ⏹️ Stop: ڤیدیۆ بوەستێنە و ڕێست بکەرەوە
+   - 🔊 Mute/Unmute: دەنگ بکوژەوە/بکەرەوە
+
+3. **کۆنترۆڵی دەنگ:**
+   - سلایدەرەکە بەکاربهێنە بۆ ڕێکخستنی دەنگ (0-100%)
+   - نیشاندانی ڕێژەی دەنگ بە کاتی ڕاستەوخۆ
+
+### Advanced Features | تایبەتمەندییە پێشکەوتووەکان
+
+**Preset Videos | ڤیدیۆی پێشوەختە:**
 - 🎶 Classic: Rick Astley - Never Gonna Give You Up
 - 🎸 Gangnam Style: PSY - Gangnam Style
 - 🌟 Despacito: Luis Fonsi ft. Daddy Yankee
 - 🎤 Bohemian Rhapsody: Queen
 
----
-
-## 🔧 Technical Implementation
-
-### **Frontend (HTML/CSS/JavaScript)**
-- Modern responsive design with CSS Grid/Flexbox
-- YouTube IFrame API integration
-- Real-time status updates and error handling
-- Smooth animations and transitions
-
-### **Backend (Lua)**
-- BeamNG.drive app system integration
-- Vehicle event handling
-- Settings persistence
-- Message passing between UI and game
-
-### **Integration Features**
-- YouTube API with format optimization
-- BeamNG event system integration
-- Cross-platform compatibility
-- Error handling and user feedback
-
----
-
-## 🌍 Language Support
-
-### **Kurdish (کوردی)**
-- Complete README translation
-- UI text localization
-- Installation instructions
-- Error messages and help text
-
-### **English**
-- Full documentation
-- User interface
-- Technical documentation
-- Installation guides
-
----
-
-## 🎨 Design Philosophy
-
-### **Car Dashboard Aesthetic**
-- Dark theme suitable for vehicle environments
-- High contrast for readability while driving
-- Intuitive button layout
-- Minimal distractions
-
-### **User Experience**
-- One-click video loading
-- Preset shortcuts for convenience
-- Visual feedback for all actions
-- Error recovery mechanisms
-
----
-
-## 🚨 Safety & Compliance
-
-### **YouTube Terms of Service**
-- Compliant with YouTube API usage policies
-- Proper attribution and licensing
-- Content filtering support
-- Educational use disclaimer
-
-### **Driving Safety**
-- Designed for passenger use
-- Quick access controls
-- Clear visual indicators
+**Vehicle Integration | یەکخستن لەگەڵ ئۆتۆمبێل:**
+- Auto-pause when vehicle stops
+- Resume on vehicle start
 - Emergency stop functionality
 
 ---
 
-## 📊 Project Statistics
+## 🔧 Configuration | ڕێکخستن
 
-- **Total Files**: 10 core files + documentation
-- **Lines of Code**: ~1,200 lines across HTML, CSS, JS, Lua
-- **Documentation**: 248 lines in README (bilingual)
-- **Languages**: JavaScript, Lua, CSS, HTML
-- **Platforms**: Windows, Linux, macOS
-- **BeamNG Compatibility**: Version 0.24.0.0+
+### Settings | ڕێکخستنەکان
 
----
+The mod automatically saves your preferences:
+- Volume level
+- Window position and size
+- Last played video
+- UI preferences
 
-## 🎯 Success Metrics
+### Supported YouTube Formats | فۆرماتە پشتگیریکراوەکانی YouTube
 
-✅ **Complete Implementation**: All requested features implemented
-✅ **Bilingual Support**: Kurdish and English documentation
-✅ **Cross-Platform**: Works on Windows, Linux, macOS
-✅ **User-Friendly**: Easy installation and usage
-✅ **Professional Quality**: Production-ready code and documentation
-✅ **BeamNG Integration**: Fully integrated with game systems
+- Regular video URLs: `https://www.youtube.com/watch?v=VIDEO_ID`
+- Short URLs: `https://youtu.be/VIDEO_ID`
+- Embed URLs: `https://www.youtube.com/embed/VIDEO_ID`
+- Direct video IDs: `VIDEO_ID` (11 characters)
 
 ---
 
-## 🚀 Future Enhancements
+## 🚨 Troubleshooting | چارەسەرکردنی کێشەکان
 
-### **Potential Additions**
-- Playlist support
-- Video search functionality
-- Favorites system
-- Video history
-- Custom themes
-- Voice control integration
+### Common Issues | کێشە باوەکان
 
-### **Technical Improvements**
-- WebGL rendering optimization
-- Offline video caching
-- Advanced audio controls
-- Multi-screen support
+**English:**
+1. **Video won't load:**
+   - Check internet connection
+   - Verify YouTube URL is correct
+   - Some videos may be region-restricted
+
+2. **No sound:**
+   - Check volume slider position
+   - Ensure BeamNG audio is enabled
+   - Try unmuting the player
+
+3. **App not appearing:**
+   - Restart BeamNG.drive
+   - Check if mod is enabled in mod menu
+   - Verify files are in correct location
+
+**Kurdish:**
+1. **ڤیدیۆ بارنابێت:**
+   - پەیوەندی ئینتەرنێت بپشکنە
+   - دڵنیابە لە ڕاستی لینکی YouTube
+   - هەندێک ڤیدیۆ لە ناوچەکەتدا بەردەست نەبێت
+
+2. **دەنگ نەبێت:**
+   - شوێنی سلایدەری دەنگ بپشکنە
+   - دڵنیابە کە دەنگی BeamNG چالاکە
+   - هەوڵ بدە دەنگی پلەیەر بکەیتەوە
+
+3. **ئەپەکە دەرنەکەوێت:**
+   - BeamNG.drive دووبارە بکەرەوە
+   - بپشکنە کە مۆدەکە لە mod menu چالاکە
+   - دڵنیابە فایلەکان لە شوێنی دروستدان
 
 ---
 
-## 📞 Support & Community
+## 📁 File Structure | پێکهاتەی فایل
 
-### **Documentation**
-- Complete bilingual README
-- Installation troubleshooting
-- Usage examples
-- Technical specifications
-
-### **Open Source**
-- MIT License for maximum flexibility
-- Community contributions welcome
-- Kurdish tech community support
-- BeamNG.drive community integration
+```
+BeamNG-YouTube-Player/
+├── ui/
+│   └── modules/
+│       └── apps/
+│           ├── youtube_screen/
+│           │   ├── youtube_screen.html     # Main UI interface
+│           │   ├── style.css              # Styling and themes
+│           │   ├── script.js              # JavaScript functionality
+│           │   └── youtube_screen_app.lua # BeamNG integration
+│           └── apps.json                  # App registration
+├── mod.json                               # Mod configuration
+├── README.md                              # This file
+└── screenshots/                           # Preview images
+```
 
 ---
 
-## 🎉 Project Completion
+## 🤝 Contributing | بەشداری
 
-This YouTube Player mod for BeamNG.drive has been successfully completed with all requested features:
+We welcome contributions! Here's how you can help:
 
-1. ✅ **Full YouTube Integration** - Like Android Auto for YouTube
-2. ✅ **Modern UI Design** - Car dashboard aesthetic
-3. ✅ **BeamNG Integration** - Vehicle event handling
-4. ✅ **Bilingual Support** - Kurdish and English
-5. ✅ **Easy Installation** - Automated installers
-6. ✅ **Professional Quality** - Production-ready code
-7. ✅ **Comprehensive Documentation** - Complete user guides
+**English:**
+- Report bugs and issues
+- Suggest new features
+- Submit translations
+- Improve documentation
+- Share your experience
 
-The mod is ready for distribution and use in the BeamNG.drive community!
+**Kurdish:**
+- کێشە و گرفتەکان ڕاپۆرت بکە
+- تایبەتمەندی نوێ پێشنیار بکە
+- وەرگێڕان بنێرە
+- بەڵگەنامە باشتر بکە
+- ئەزموونەکەت بڵاوبکەرەوە
+
+---
+
+## 📄 License | مۆڵەت
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 🙏 Acknowledgments | سپاسگوزاری
+
+- BeamNG.drive community for inspiration
+- YouTube for providing the iframe API
+- Kurdish tech community for language support
+- Beta testers and contributors
+
+---
+
+## 📞 Support | پشتگیری
+
+For support, please:
+- Check the troubleshooting section above
+- Report issues on the project repository
+- Join the BeamNG.drive community forums
+- Contact the mod author
 
 ---
 
