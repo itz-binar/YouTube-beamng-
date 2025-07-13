@@ -3,71 +3,297 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>YouTube Player for BeamNG</title>
+  <title>Professional YouTube Player - BeamNG.drive</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="youtube-container">
-    <!-- Main YouTube Player -->
-    <div class="player-section">
-      <iframe id="ytplayer" 
-              type="text/html" 
-              width="100%" 
-              height="300"
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=0&controls=1&enablejsapi=1&origin=https://localhost"
-              frameborder="0" 
-              allowfullscreen>
-      </iframe>
+  <div class="main-container" id="main-container">
+    <!-- Header Section with Vehicle Information -->
+    <div class="header-section">
+      <div class="vehicle-info">
+        <span class="vehicle-model" id="vehicle-model">Vehicle Loading...</span>
+        <span class="vehicle-status" id="vehicle-status">Initializing...</span>
+      </div>
+      <div class="system-status">
+        <div class="status-indicator" id="ecu-status">
+          <span class="status-icon">🔧</span>
+          <span class="status-text">ECU</span>
+        </div>
+        <div class="status-indicator" id="audio-status">
+          <span class="status-icon">🔊</span>
+          <span class="status-text">Audio</span>
+        </div>
+        <div class="status-indicator" id="network-status">
+          <span class="status-icon">🌐</span>
+          <span class="status-text">Network</span>
+        </div>
+      </div>
     </div>
 
-    <!-- Controls Section -->
-    <div class="controls-section">
-      <div class="input-group">
-        <input type="text" 
-               id="video-url" 
-               placeholder="Enter YouTube URL or Video ID"
-               class="url-input">
-        <button id="load-video" class="btn btn-primary">Load Video</button>
-      </div>
-      
-      <div class="preset-videos">
-        <h3>🎵 Quick Play</h3>
-        <div class="preset-buttons">
-          <button class="preset-btn" data-video="dQw4w9WgXcQ">🎶 Classic</button>
-          <button class="preset-btn" data-video="9bZkp7q19f0">🎸 Gangnam Style</button>
-          <button class="preset-btn" data-video="kJQP7kiw5Fk">🌟 Despacito</button>
-          <button class="preset-btn" data-video="fJ9rUzIMcZQ">🎤 Bohemian Rhapsody</button>
+    <!-- Main Content Area -->
+    <div class="content-area">
+      <!-- Video Player Section -->
+      <div class="player-section">
+        <div class="video-container">
+          <iframe id="ytplayer" 
+                  type="text/html" 
+                  width="100%" 
+                  height="100%"
+                  src="about:blank"
+                  frameborder="0" 
+                  allowfullscreen>
+          </iframe>
+          <div class="video-overlay" id="video-overlay">
+            <div class="overlay-content">
+              <div class="loading-spinner" id="loading-spinner"></div>
+              <div class="overlay-message" id="overlay-message">Ready to play YouTube</div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Video Information Display -->
+        <div class="video-info">
+          <div class="video-title" id="video-title">No video loaded</div>
+          <div class="video-metadata">
+            <span class="video-duration" id="video-duration">--:--</span>
+            <span class="video-quality" id="video-quality">Auto</span>
+            <span class="video-views" id="video-views">--</span>
+          </div>
         </div>
       </div>
 
-      <div class="player-controls">
-        <button id="play-pause" class="btn btn-control">▶️ Play/Pause</button>
-        <button id="stop" class="btn btn-control">⏹️ Stop</button>
-        <button id="mute" class="btn btn-control">🔊 Mute/Unmute</button>
-      </div>
+      <!-- Control Panel Section -->
+      <div class="control-panel">
+        <!-- URL Input and Video Loading -->
+        <div class="input-section">
+          <div class="input-group">
+            <input type="text" 
+                   id="video-url" 
+                   placeholder="Enter YouTube URL or search..."
+                   class="url-input">
+            <button id="load-video" class="btn btn-primary">
+              <span class="btn-icon">📹</span>
+              Load
+            </button>
+            <button id="search-video" class="btn btn-secondary">
+              <span class="btn-icon">🔍</span>
+              Search
+            </button>
+          </div>
+        </div>
 
-      <div class="volume-control">
-        <label for="volume">🔊 Volume:</label>
-        <input type="range" id="volume" min="0" max="100" value="50" class="volume-slider">
-        <span id="volume-display">50%</span>
+        <!-- Playback Controls -->
+        <div class="playback-controls">
+          <button id="prev-track" class="btn btn-control">
+            <span class="btn-icon">⏮️</span>
+          </button>
+          <button id="play-pause" class="btn btn-control btn-primary">
+            <span class="btn-icon">▶️</span>
+          </button>
+          <button id="next-track" class="btn btn-control">
+            <span class="btn-icon">⏭️</span>
+          </button>
+          <button id="stop" class="btn btn-control">
+            <span class="btn-icon">⏹️</span>
+          </button>
+          <button id="repeat" class="btn btn-control">
+            <span class="btn-icon">🔁</span>
+          </button>
+          <button id="shuffle" class="btn btn-control">
+            <span class="btn-icon">🔀</span>
+          </button>
+        </div>
+
+        <!-- Audio Controls -->
+        <div class="audio-controls">
+          <div class="volume-section">
+            <button id="mute" class="btn btn-control">
+              <span class="btn-icon">🔊</span>
+            </button>
+            <div class="volume-control">
+              <input type="range" id="volume" min="0" max="100" value="50" class="volume-slider">
+              <span id="volume-display">50%</span>
+            </div>
+          </div>
+          
+          <div class="audio-settings">
+            <button id="audio-settings" class="btn btn-control">
+              <span class="btn-icon">🎛️</span>
+              Audio
+            </button>
+            <button id="equalizer" class="btn btn-control">
+              <span class="btn-icon">🎚️</span>
+              EQ
+            </button>
+          </div>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-section">
+          <div class="progress-bar" id="progress-bar">
+            <div class="progress-fill" id="progress-fill"></div>
+            <div class="progress-handle" id="progress-handle"></div>
+          </div>
+          <div class="progress-time">
+            <span id="current-time">0:00</span>
+            <span id="total-time">0:00</span>
+          </div>
+        </div>
       </div>
     </div>
 
-    <!-- Status Display -->
-    <div class="status-section">
-      <div class="status-indicator">
-        <span class="status-text">Ready for YouTube</span>
-        <div class="connection-status online">🟢 Online</div>
+    <!-- Side Panel -->
+    <div class="side-panel">
+      <!-- Quick Access -->
+      <div class="quick-access">
+        <h3>Quick Access</h3>
+        <div class="quick-buttons">
+          <button class="quick-btn" data-video="dQw4w9WgXcQ">
+            <span class="quick-icon">🎶</span>
+            <span class="quick-text">Classic</span>
+          </button>
+          <button class="quick-btn" data-video="9bZkp7q19f0">
+            <span class="quick-icon">🎸</span>
+            <span class="quick-text">Gangnam</span>
+          </button>
+          <button class="quick-btn" data-video="kJQP7kiw5Fk">
+            <span class="quick-icon">🌟</span>
+            <span class="quick-text">Despacito</span>
+          </button>
+          <button class="quick-btn" data-video="fJ9rUzIMcZQ">
+            <span class="quick-icon">🎤</span>
+            <span class="quick-text">Bohemian</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Playlist Section -->
+      <div class="playlist-section">
+        <h3>Playlist</h3>
+        <div class="playlist-container" id="playlist-container">
+          <div class="playlist-item" data-video="dQw4w9WgXcQ">
+            <div class="playlist-thumbnail">🎵</div>
+            <div class="playlist-info">
+              <div class="playlist-title">Never Gonna Give You Up</div>
+              <div class="playlist-artist">Rick Astley</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Vehicle Integration -->
+      <div class="vehicle-integration">
+        <h3>Vehicle Systems</h3>
+        <div class="vehicle-data">
+          <div class="data-item">
+            <span class="data-label">Speed:</span>
+            <span class="data-value" id="vehicle-speed">0 mph</span>
+          </div>
+          <div class="data-item">
+            <span class="data-label">RPM:</span>
+            <span class="data-value" id="vehicle-rpm">0</span>
+          </div>
+          <div class="data-item">
+            <span class="data-label">Gear:</span>
+            <span class="data-value" id="vehicle-gear">N</span>
+          </div>
+          <div class="data-item">
+            <span class="data-label">Fuel:</span>
+            <span class="data-value" id="vehicle-fuel">--</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Settings Panel (Hidden by default) -->
+    <div class="settings-panel hidden" id="settings-panel">
+      <div class="settings-header">
+        <h3>Settings</h3>
+        <button id="close-settings" class="btn btn-control">❌</button>
+      </div>
+      <div class="settings-content">
+        <div class="setting-group">
+          <h4>Audio Settings</h4>
+          <div class="setting-item">
+            <label>Master Volume</label>
+            <input type="range" id="master-volume" min="0" max="100" value="50">
+          </div>
+          <div class="setting-item">
+            <label>Bass</label>
+            <input type="range" id="bass-level" min="-10" max="10" value="0">
+          </div>
+          <div class="setting-item">
+            <label>Treble</label>
+            <input type="range" id="treble-level" min="-10" max="10" value="0">
+          </div>
+        </div>
+        
+        <div class="setting-group">
+          <h4>Video Settings</h4>
+          <div class="setting-item">
+            <label>Quality</label>
+            <select id="video-quality">
+              <option value="auto">Auto</option>
+              <option value="720p">720p</option>
+              <option value="1080p">1080p</option>
+              <option value="480p">480p</option>
+            </select>
+          </div>
+          <div class="setting-item">
+            <label>Autoplay</label>
+            <input type="checkbox" id="autoplay-setting">
+          </div>
+        </div>
+        
+        <div class="setting-group">
+          <h4>Vehicle Integration</h4>
+          <div class="setting-item">
+            <label>Auto-pause on high speed</label>
+            <input type="checkbox" id="speed-restriction" checked>
+          </div>
+          <div class="setting-item">
+            <label>Engine RPM volume adjustment</label>
+            <input type="checkbox" id="rpm-volume" checked>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer with System Information -->
+    <div class="footer-section">
+      <div class="system-info">
+        <span class="system-version">YouTube Player v2.0.0</span>
+        <span class="beamng-version" id="beamng-version">BeamNG.drive v0.31</span>
+        <span class="connection-info" id="connection-info">Online</span>
+      </div>
+      <div class="footer-controls">
+        <button id="settings-btn" class="btn btn-control">
+          <span class="btn-icon">⚙️</span>
+        </button>
+        <button id="help-btn" class="btn btn-control">
+          <span class="btn-icon">❓</span>
+        </button>
+        <button id="fullscreen-btn" class="btn btn-control">
+          <span class="btn-icon">🔳</span>
+        </button>
       </div>
     </div>
   </div>
 
-  <!-- Loading Overlay -->
-  <div id="loading-overlay" class="loading-overlay hidden">
-    <div class="loading-spinner"></div>
-    <p>Loading video...</p>
+  <!-- Emergency Safety Overlay -->
+  <div class="emergency-overlay hidden" id="emergency-overlay">
+    <div class="emergency-content">
+      <div class="emergency-icon">⚠️</div>
+      <div class="emergency-message">
+        <h2>Safety Alert</h2>
+        <p>Media has been paused due to safety restrictions.</p>
+        <p>Current speed: <span id="emergency-speed">--</span> mph</p>
+      </div>
+      <button id="emergency-acknowledge" class="btn btn-danger">Acknowledge</button>
+    </div>
   </div>
 
+  <!-- Scripts -->
   <script src="script.js"></script>
 </body>
 </html>

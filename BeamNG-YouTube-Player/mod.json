@@ -1,69 +1,93 @@
 {
-  "name": "YouTube Player for BeamNG.drive",
-  "author": "BeamNG Community",
-  "version": "1.0.0",
-  "description": "Advanced YouTube player for vehicle entertainment systems. Like Android Auto but for YouTube! Play videos, music, and entertainment content directly in your vehicle's dashboard.",
-  "gameVersion": "0.24.0.0",
-  "category": "Entertainment",
+  "name": "Professional YouTube Player",
+  "author": "BeamNG Professional Mods",
+  "version": "2.0.0",
+  "description": "Professional YouTube player with full vehicle system integration. Supports all vehicle types with realistic dashboard integration, ECU communication, and advanced vehicle-specific features.",
+  "gameVersion": "0.31.0.0",
+  "category": "Vehicle Systems",
   "tags": [
     "youtube",
-    "video",
-    "music",
-    "entertainment",
-    "ui",
-    "app",
-    "media",
+    "infotainment",
     "dashboard",
-    "android-auto"
+    "vehicle-systems",
+    "ecu",
+    "professional",
+    "multimedia",
+    "realistic"
   ],
   "dependencies": [],
   "conflicts": [],
-  "website": "",
-  "repository": "",
+  "website": "https://github.com/beamng-professional-mods/youtube-player",
+  "repository": "https://github.com/beamng-professional-mods/youtube-player",
   "license": "MIT",
-  "icon": "ui/modules/apps/youtube_screen/icon.png",
+  "icon": "icon.png",
   "screenshots": [
-    "screenshots/youtube_player_1.png",
-    "screenshots/youtube_player_2.png"
+    "screenshots/dashboard_integration.png",
+    "screenshots/vehicle_support.png",
+    "screenshots/ecu_integration.png"
   ],
   "features": [
-    "Full YouTube video playback",
-    "Music and video support",
-    "Volume controls",
-    "Preset quick-play buttons",
-    "Beautiful car-dashboard UI",
-    "Responsive design",
-    "BeamNG integration",
-    "Vehicle event handling",
-    "Settings persistence",
-    "Online/offline status",
-    "Loading animations",
-    "Error handling"
+    "Full ECU integration with vehicle systems",
+    "Multi-vehicle support (cars, trucks, buses)",
+    "Realistic dashboard integration",
+    "Vehicle-specific UI themes",
+    "Engine state monitoring",
+    "Electrical system integration",
+    "Advanced audio routing",
+    "Professional grade code",
+    "Real-time vehicle data display",
+    "Crash detection and safety features"
   ],
+  "beamNG": {
+    "type": "vehicle_system",
+    "priority": "high",
+    "loadOrder": 100,
+    "supportedVehicles": ["*"],
+    "systemIntegration": {
+      "ecu": true,
+      "dashboard": true,
+      "audio": true,
+      "electrical": true,
+      "engine": true
+    }
+  },
   "installation": {
-    "type": "ui_app",
-    "extractTo": "ui/modules/apps/"
+    "type": "vehicle_system_mod",
+    "requiresRestart": true,
+    "extractTo": "/"
   },
   "permissions": [
+    "vehicle_systems",
+    "ecu_access",
+    "dashboard_control",
+    "audio_system",
+    "electrical_system",
     "internet",
-    "audio",
-    "video",
-    "ui",
-    "settings"
+    "file_system"
   ],
-  "supportedLanguages": [
-    "en",
-    "ku"
+  "supportedPlatforms": [
+    "windows",
+    "linux",
+    "mac"
   ],
+  "requirements": {
+    "internet": true,
+    "audio": true,
+    "beamng_version": "0.31.0.0"
+  },
   "changelog": {
+    "2.0.0": [
+      "Complete rewrite for professional BeamNG integration",
+      "Full ECU system integration",
+      "Multi-vehicle support with vehicle-specific features",
+      "Realistic dashboard integration",
+      "Advanced vehicle system monitoring",
+      "Professional grade architecture",
+      "Real-time vehicle data integration",
+      "Crash detection and safety systems"
+    ],
     "1.0.0": [
-      "Initial release",
-      "YouTube video playback",
-      "Modern UI design",
-      "BeamNG integration",
-      "Volume and playback controls",
-      "Preset video buttons",
-      "Settings persistence"
+      "Initial release with basic YouTube functionality"
     ]
   }
 }
